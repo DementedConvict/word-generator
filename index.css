@@ -1,4 +1,17 @@
 .wordGenerator {
     border: 3px solid black;
     border-radius: 5px;
+    width: 500px;
+    height: 800px;
+    margin: auto;
+}
+
+#generateWords {
+    height: 50px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    font-size: 21px;
 }
