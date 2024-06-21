@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="javascript" type="javascript" href=./main.js">
     <link rel="stylesheet" type="text/css" href="./index.css">
     <title>Word Generator</title>
 </head>
 <body>
+    <script src="./main.js"></script>
     <h1 style="text-align: center;">Use this button to generate random words.</h1>
     <div class="wordGenerator">
-        
+        <h2>Generate a random number of words! (Max: 50)</h2>
+        <div id="output"></div>
 
-    <button id="generateWords">GENERATE WORDS</button>
+    <button id="generateWords" onclick='generateWords'>GENERATE WORDS</button>
     </div>
 
 
