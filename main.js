@@ -7,11 +7,33 @@ let generatedWords = [];
 const generateWords = () => {
     let generate = Math.floor(Math.random() * wordsOriginal.length);
     console.log(generate);
+    if (!generate) {
+        generate = Math.floor(Math.random() * wordsOriginal.length);
+        console.log(generate);
+    };
+
     for (let i = 0; i < generate; i++) {
         let generation = Math.floor(Math.random() * wordsOriginal.length);
         let word = wordsOriginal[generation];
         generatedWords.push(word);
     };
 };
-generateWords();
+
+let words = document.getElementById('words');
+const original = words.innerText;
+
+let buttonClick = () => {
+
+    if (words.innerText !== original) {
+        generatedWords = [];
+    };
+
+    generateWords();
+    words.innerText = generatedWords.join(' ');
+    words.style.opacity = 1.0;
+};
+let buttonAction = document.querySelector('button');
+
+buttonAction.onclick = buttonClick;
+
 });
